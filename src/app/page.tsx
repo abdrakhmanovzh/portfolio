@@ -6,7 +6,7 @@ import { HeroSection } from '@/components/hero-section'
 
 export default function Home() {
   return (
-    <div className="relative flex flex-col gap-20 py-20">
+    <div className="relative flex flex-col gap-14 py-20 md:gap-20">
       <HeroSection />
 
       <AboutSection />

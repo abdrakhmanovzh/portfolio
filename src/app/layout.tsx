@@ -19,16 +19,20 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html suppressHydrationWarning lang="en">
-      <body className={cn(GeistSans.className, 'min-h-screen overflow-x-hidden')}>
+    <html className="overflow-x-hidden" suppressHydrationWarning lang="en">
+      <body className={cn(GeistSans.className, 'relative min-h-screen overflow-x-hidden')}>
         <ThemeProvider disableTransitionOnChange defaultTheme="dark" attribute="class">
           <Navbar />
 
           <Blob className="absolute left-0 top-64 opacity-20" />
 
-          <Blob className="absolute right-0 top-2/3 opacity-20" />
+          <Blob className="absolute right-0 top-[30%] opacity-20 md:top-[40%]" />
 
-          <Blob className="absolute left-0 top-[120%] opacity-20" />
+          <Blob className="absolute left-0 top-[50%] opacity-20 md:top-[70%]" />
+
+          <Blob className="absolute right-0 top-[70%] opacity-20 md:hidden" />
+
+          <Blob className="absolute left-0 top-[90%] opacity-20 md:hidden" />
 
           <main className="px-[10%] 2xl:px-[15%]">{children}</main>
         </ThemeProvider>

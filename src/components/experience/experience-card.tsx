@@ -10,11 +10,11 @@ interface Props {
 export function ExperienceCard({ description, position, company, date }: Props) {
   return (
     <div className="flex w-full flex-col gap-4">
-      <div className="flex items-center justify-between">
+      <div className="flex flex-col gap-3 md:flex-row md:items-center md:justify-between">
         <h3>
           <HighlightedText text={company} /> - {position}
         </h3>
-        <span>{date}</span>
+        <span className="text-sm md:text-base">{date}</span>
       </div>
 
       <ul className="flex list-inside flex-col gap-1">
